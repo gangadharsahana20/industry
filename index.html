@@ -21,11 +21,16 @@
          <span class="logo-industries">Industries</span>
       </div>
     </div>
+    <!-- Menu Icon (Mobile) -->
+    <div class="menu-icon" id="menu-icon">&#9776;</div>
     <ul class="nav-links">
+
+        <!-- Close Icon (Inside Mobile Menu) -->
+      <li class="close-icon" id="close-icon">&times;</li>
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
       <li><a href="services.html">Services</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 </header>
@@ -252,6 +257,24 @@ Ability to support timely and continuous production volumes
 
 <!-- Font Awesome for icons -->
 <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+
+<script>
+  const menuIcon = document.getElementById('menu-icon');
+  const closeIcon = document.getElementById('close-icon');
+  const navList = document.getElementById('nav-list');
+
+  menuIcon.addEventListener('click', () => {
+    navList.classList.add('active');
+  });
+
+  closeIcon.addEventListener('click', () => {
+    navList.classList.remove('active');
+  });
+</script>
+
+
 
 </body>
 </html>
