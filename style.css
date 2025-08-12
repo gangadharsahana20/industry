@@ -411,6 +411,7 @@ body {
 
 /* Section Base */
 .services-section {
+    background-color: #d4d3d3;
   padding: 60px 20px;
   text-align: center;
 }
@@ -918,4 +919,414 @@ body {
     .footer {
         flex-direction: column;
     }
+}
+
+
+/*-----------about page--------------*/
+
+.joy-about-section {
+  background-color: #1e2b38;
+  padding: 120px 0 60px; /* increased top padding */
+}
+
+.joy-about-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 5%;
+  position: relative;
+}
+
+.joy-about-content {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  flex: 1;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 2; /* keep above video */
+  margin-right: -60px; /* overlap towards video */
+}
+
+.joy-about-content h2 {
+  font-size: 2rem;
+  color: black;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.joy-about-content h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: red;
+  margin-top: 5px;
+}
+
+.joy-about-content p {
+  margin: 15px 0;
+  line-height: 1.6;
+  color: #333;
+}
+
+.joy-about-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.joy-about-content ul li {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #000;
+}
+
+.joy-about-image {
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.joy-about-image video {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* Responsive stacking for small screens */
+@media (max-width: 768px) {
+  .joy-about-wrapper {
+    flex-direction: column;
+  }
+
+  .joy-about-content {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .joy-about-wrapper {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  .joy-about-content {
+    padding: 20px;
+  }
+
+  .joy-about-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .joy-about-image video {
+    height: auto;
+  }
+
+  .joy-about-section {
+    padding: 80px 0 40px; /* reduce padding for smaller screens */
+  }
+}
+
+
+
+/*---------------services page--------------*/
+
+
+/*--------------------------services page-----------------------------*/
+
+/* Services Section */
+.services {
+  background-color: #f9f9f9;
+  padding: 80px 10%;
+  color: #222;
+}
+
+.section-title {
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+  display: inline-block;
+  border-bottom: 5px solid #b94c3c;
+  padding-bottom: 10px;
+}
+
+.service-list {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.service-item {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  opacity: 0;
+  animation: fadeInUp 1s forwards;
+}
+
+.service-item img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.service-text {
+  max-width: 600px;
+}
+
+.service-text h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #b94c3c;
+}
+
+.service-text p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* Animation variations */
+.animate-left {
+  animation-name: slideInLeft;
+}
+
+.animate-right {
+  animation-name: slideInRight;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .service-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .service-item img {
+    width: 90%;
+  }
+
+  .service-text {
+    max-width: 100%;
+  }
+}
+
+
+
+
+
+/*---------------------------contact page--------------------------*/
+
+/* Contact Section Styling */
+.contact-section {
+  padding: 80px 10%;
+  background: linear-gradient(135deg, #f5f5f5 0%, #eaeaea 100%);
+  font-family: Arial, sans-serif;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+/* Left: Contact Info */
+.contact-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-info h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #d32f2f;
+}
+
+.contact-info h3 {
+  margin-top: 25px;
+  font-size: 1.3rem;
+  color: #d32f2f;
+}
+
+.contact-detail {
+  font-size: 1rem;
+  margin: 10px 0;
+  color: #555;
+}
+
+.contact-detail i {
+  color: #d32f2f;
+  margin-right: 8px;
+}
+
+/* Google Map Embed */
+.contact-map {
+  margin-top: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.contact-map iframe {
+  width: 100%;
+  height: 250px;
+  border: none;
+  display: block;
+}
+
+/* Right: Form */
+.contact-form {
+  flex: 1;
+  min-width: 300px;
+  background: white;
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.contact-form h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #d32f2f;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #d32f2f;
+  box-shadow: 0 0 5px rgba(211, 47, 47, 0.3);
+}
+
+.contact-form button {
+  padding: 12px;
+  font-size: 1rem;
+  background: #d32f2f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #b71c1c;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-map iframe {
+    height: 300px;
+  }
+}
+
+/*--------------------------- Navigation Menu --------------------------*/
+
+/* Default (desktop view) */
+.menu-icon {
+  display: none; /* hide menu icon on big screens */
+}
+
+.close-icon {
+  display: none; /* hide close icon by default */
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  /* Hide nav menu by default */
+  nav ul {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 250px;
+    flex-direction: column;
+    background: #222;
+    padding: 2rem;
+    gap: 1.5rem;
+    z-index: 1000;
+  }
+
+  /* Show menu when active */
+  nav ul.active {
+    display: flex;
+  }
+
+  /* Show menu icon on small screens */
+  .menu-icon {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+  }
+
+  /* Show close icon inside mobile menu */
+  .close-icon {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+    align-self: flex-end;
+  }
 }
