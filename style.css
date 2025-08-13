@@ -1046,7 +1046,6 @@ body {
 
 
 
-/*---------------services page--------------*/
 
 
 /*--------------------------services page-----------------------------*/
@@ -1061,12 +1060,14 @@ body {
 .section-title {
   font-size: 2.8rem;
   text-align: center;
-  margin-bottom: 60px;
+  margin: 0 auto 60px auto; /* Center horizontally */
   position: relative;
-  display: inline-block;
+  display: block; /* Changed from inline-block */
   border-bottom: 5px solid #b94c3c;
   padding-bottom: 10px;
+  width: fit-content; /* Keeps underline length tight to text */
 }
+
 
 .service-list {
   display: flex;
