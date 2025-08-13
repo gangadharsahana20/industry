@@ -21,20 +21,47 @@
          <span class="logo-industries">Industries</span>
       </div>
     </div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+    <!-- Hamburger menu icon (only for mobile) -->
+<div class="menu-icon" id="menu-icon">
+  <i class="fas fa-bars"></i>
+</div>
+
+<ul class="nav-links" id="nav-list">
+  <!-- Close icon inside menu -->
+  <li class="close-icon" id="close-icon">
+    <i class="fas fa-times"></i>
+  </li>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="about.html">About</a></li>
+  <li><a href="services.html">Services</a></li>
+  <li><a href="contact.html">Contact</a></li>
+</ul>
+
   </nav>
 </header>
 
 
+<br>
+<br>
+<br>
 
-<br>
-<br>
-<br>
+
+
+<!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>The Path to<br> Sustainable Future</h1>
+      <p>Expertise in Sheet Metal Fabrication,Pressed Components,<br> various types of Panel Boards, Switch Room Assemblies and<br> Control Panels/Enclosures for various Electrical/Electronic Application and<br> Telecommunication Applications.
+</p>
+      <div class="hero-buttons">
+        <a href="#" class="btn btn-red">Our Service</a>
+        <a href="#" class="btn btn-white">Contact us</a>
+      </div>
+    </div>
+  </section>
+
+
+
 
 <section class="contact-section">
   <div class="contact-container">
@@ -110,3 +137,19 @@
 
 
 
+
+
+
+<script>
+  const menuIcon = document.getElementById('menu-icon');
+  const closeIcon = document.getElementById('close-icon');
+  const navList = document.getElementById('nav-list');
+
+  menuIcon.addEventListener('click', () => {
+    navList.classList.add('active');
+  });
+
+  closeIcon.addEventListener('click', () => {
+    navList.classList.remove('active');
+  });
+</script>

@@ -21,17 +21,22 @@
          <span class="logo-industries">Industries</span>
       </div>
     </div>
-    <!-- Menu Icon (Mobile) -->
-    <div class="menu-icon" id="menu-icon">&#9776;</div>
-    <ul class="nav-links">
+    <!-- Hamburger menu icon (only for mobile) -->
+<div class="menu-icon" id="menu-icon">
+  <i class="fas fa-bars"></i>
+</div>
 
-        <!-- Close Icon (Inside Mobile Menu) -->
-      <li class="close-icon" id="close-icon">&times;</li>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+<ul class="nav-links" id="nav-list">
+  <!-- Close icon inside menu -->
+  <li class="close-icon" id="close-icon">
+    <i class="fas fa-times"></i>
+  </li>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="about.html">About</a></li>
+  <li><a href="services.html">Services</a></li>
+  <li><a href="contact.html">Contact</a></li>
+</ul>
+
   </nav>
 </header>
 
@@ -260,6 +265,8 @@ Ability to support timely and continuous production volumes
 
 
 
+
+
 <script>
   const menuIcon = document.getElementById('menu-icon');
   const closeIcon = document.getElementById('close-icon');
@@ -273,6 +280,8 @@ Ability to support timely and continuous production volumes
     navList.classList.remove('active');
   });
 </script>
+
+
 
 
 

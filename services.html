@@ -11,7 +11,6 @@
 </head>
 <body>
 
-  <!-- Navigation -->
   <header>
   <nav class="navbar">
     <div class="logo-container">
@@ -21,14 +20,25 @@
          <span class="logo-industries">Industries</span>
       </div>
     </div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+    <!-- Hamburger menu icon (only for mobile) -->
+<div class="menu-icon" id="menu-icon">
+  <i class="fas fa-bars"></i>
+</div>
+
+<ul class="nav-links" id="nav-list">
+  <!-- Close icon inside menu -->
+  <li class="close-icon" id="close-icon">
+    <i class="fas fa-times"></i>
+  </li>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="about.html">About</a></li>
+  <li><a href="services.html">Services</a></li>
+  <li><a href="contact.html">Contact</a></li>
+</ul>
+
   </nav>
 </header>
+
 
 
 
@@ -107,3 +117,27 @@
         <p>© 2025 by Joy Industries. Powered and secured by <a href="#">Shashwatha Groups</a></p>
     </div>
 </footer>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  const menuIcon = document.getElementById('menu-icon');
+  const closeIcon = document.getElementById('close-icon');
+  const navList = document.getElementById('nav-list');
+
+  menuIcon.addEventListener('click', () => {
+    navList.classList.add('active');
+  });
+
+  closeIcon.addEventListener('click', () => {
+    navList.classList.remove('active');
+  });
+</script>
